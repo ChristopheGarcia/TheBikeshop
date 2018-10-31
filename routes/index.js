@@ -20,12 +20,12 @@ let dataBike = [
 router.get('/', (req, res, next) => {
 
   //console.log(req.session.dataCardBike);
-  if(req.session.dataCardBike == undefined) {
-    req.session.dataCardBike = [];
-  }
-  if(req.session.isLogin == undefined) {
-    req.session.isLogin = false;
-  }
+  // if(req.session.dataCardBike == undefined) {
+  //   req.session.dataCardBike = [];
+  // }
+  // if(req.session.isLogin == undefined) {
+  //   req.session.isLogin = false;
+  // }
 
   res.render('index', {dataBike: dataBike, isLogin: req.session.isLogin});
 });
