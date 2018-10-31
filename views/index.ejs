@@ -21,7 +21,7 @@
        <div class="row" id="shop-background">
        </div>
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-12">
           <%
           if(isLogin == false) {
@@ -35,7 +35,7 @@
           }
           %>
         </div>
-      </div>
+      </div> -->
 
 
       <div class="row">
@@ -55,13 +55,9 @@
                 <input type="hidden" name="name" value="<%=dataBike[i].name %>">
                 <input type="hidden" name="price" value="<%=dataBike[i].price %>">
                 <input type="hidden" name="quantity" value="1">
-                <%
-                if(isLogin == true) {
-                %>
+              
                     <button class="btn btn-outline-info btn-sm">Buy</button>
-                <%
-                }
-                %>
+               
               </form>
 
             </div>
@@ -73,5 +69,15 @@
       </div>
 
     </div>
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <script>
+      Weglot.setup({
+        api_key: 'wg_5fc26c8a375aca27bb7fd0bcc53e689f6',
+        originalLanguage: 'en',
+        destinationLanguages : 'fr,es,de,it,ko',
+        styleOpt : { fullname: true , withname: true , is_dropdown: true , classF: "wg-flags flag-3" },
+        excludePaths: "/add-card",
+      });
+    </script>
   </body>
 </html>
